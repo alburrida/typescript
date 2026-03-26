@@ -1,0 +1,14 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const math_utils_js_1 = require("./math-utils.js");
+const datosPrueba = [10, 12, 15, 14, 13, 100];
+const datosVacios = [];
+console.log("=== PRUEBAS MODULO 1 ===");
+console.log("Datos:", datosPrueba);
+console.log("Media:", (0, math_utils_js_1.calcularMedia)(datosPrueba));
+console.log("Mediana:", (0, math_utils_js_1.calcularMediana)(datosPrueba));
+console.log("Filtrar atípicos (límite 20):", (0, math_utils_js_1.filtrarAtipicos)(datosPrueba, 20));
+console.log("\n=== CASOS LÍMITE ===");
+console.log("Media array vacío:", (0, math_utils_js_1.calcularMedia)(datosVacios));
+console.log("Mediana array vacío:", (0, math_utils_js_1.calcularMediana)(datosVacios));
+console.log("Filtrar atípicos array vacío:", (0, math_utils_js_1.filtrarAtipicos)(datosVacios, 10));

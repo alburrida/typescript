@@ -11,7 +11,9 @@ export function generarReporte(estado: EstadoMatricula): string {
     case "FINALIZADA":
       return `Matrícula finalizada con nota media de ${estado.notaMedia}.`;
 
-    default:
-      return "Estado de matrícula desconocido.";
+    default: {
+      const comprobacionExhaustiva: never = estado;
+      throw new Error(`Estado no manejado: ${JSON.stringify(comprobacionExhaustiva)}`);
+    }
   }
 }
